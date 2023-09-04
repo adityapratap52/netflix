@@ -10,14 +10,14 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
 export class MovieDetailsComponent implements OnInit {
 
   getMovieDetailsResult: any;
-  getMovieVideoResult: any = [];
+  getMovieVideoResult: any[] = [];
   getMovieCastResult: any;
 
   constructor(private service: MovieApiServiceService, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
     let movieId = this.router.snapshot.paramMap.get('id');
-    console.log(movieId, 'movieId#');
+    // console.log(movieId, 'movieId#');
 
     this.getMovie(movieId);
     this.getVideo(movieId);
@@ -26,13 +26,14 @@ export class MovieDetailsComponent implements OnInit {
 
   getMovie(id: any) {
     this.service.getMovieDetails(id).subscribe((result) => {
-      console.log(result, 'getMovieDetails#');
+      // console.log(result, 'getMovieDetails#');
       this.getMovieDetailsResult = result;
     });
   }
 
   getVideo(id: any) {
     this.service.getMovieVideo(id).subscribe((result) => {
+      
       // console.log(result, 'getMovieVideo#');
       let count = 0;
       result.results.forEach((element: any) => {
@@ -41,8 +42,9 @@ export class MovieDetailsComponent implements OnInit {
           count++;
         }
       });
+      this.getMovieVideoResult.reverse();
     });
-    // this.getMovieDetailsResult = this.getMovieDetailsResult.reverse();
+
   }
 
   getMovieCast(id: any) {
