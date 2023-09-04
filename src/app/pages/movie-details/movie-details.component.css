@@ -11,3 +11,12 @@ h1 {
 p {
     color: #ffffff;
 }
+
+.btn:hover {
+    border: 2px solid white;
+}
+
+.test {
+    box-sizing: content-box;
+    margin-right: 7px;
+}

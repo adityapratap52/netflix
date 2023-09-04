@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup} from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
 @Component({
   selector: 'app-search',
@@ -15,14 +15,14 @@ export class SearchComponent implements OnInit {
 
   searchResult: any;
   searchForm = new FormGroup({
-    'movieName' : new FormControl(null)
+    'movieName': new FormControl(null)
   });
 
   submitForm() {
-      console.log(this.searchForm.value, 'serachform#')
-      this.service.getSearchMovie(this.searchForm.value).subscribe((result) => {
-        console.log(result, 'resultMovie#')
-        this.searchResult = result.results;
-      });
+    console.log(this.searchForm.value, 'serachform#')
+    this.service.getSearchMovie(this.searchForm.value).subscribe((result) => {
+      // console.log(result, 'resultMovie#')
+      this.searchResult = result.results;
+    });
   }
 }

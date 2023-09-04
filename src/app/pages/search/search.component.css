@@ -10,8 +10,10 @@ button:hover {
 
 img {
     width: 100%;
+    cursor: pointer;
 }
 
 h5 {
     color: #ffffff;
+    cursor: pointer;
 }

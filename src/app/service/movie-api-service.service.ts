@@ -42,4 +42,32 @@ export class MovieApiServiceService {
   getMovieCast(data: any): Observable<any> {
     return this.http.get(`${this.baseurl}/movie/${data}/credits?api_key=${this.apikey}`);
   }
+
+  // fetch adventure movies
+  fetchAdventureMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=12`);
+  }
+
+  // fetch animation movies
+  fetchAnimationMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=16`);
+  }
+  // fetch action movies
+  fetchActionMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=28`);
+  }
+
+  // fetch comedy movies
+  fetchComedyMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=35`);
+  }
+  // fetch documentary movies
+  fetchDocumentaryMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=99`);
+  }
+
+  // fetch science-fiction movies
+  fetchScienceFictionMovies(): Observable<any> {
+    return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=878`);
+  }
 }

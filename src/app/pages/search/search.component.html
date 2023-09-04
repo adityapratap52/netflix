@@ -15,13 +15,14 @@
             <div class="row">
                 <div class="col-lg-3 mt-3 mb-3" *ngIf="s.poster_path">
                     <img src="https://image.tmdb.org/t/p/original/{{ s.poster_path }}" class="rowing largeposter"
-                        alt="...">
+                        [routerLink]="['/movie', s.id]" alt="...">
                 </div>
                 <div class="col-lg-3 mt-3 mb-3" *ngIf="!s.poster_path">
-                    <img src="../../../assets/images/default.png" class="rowing largeposter" alt="...">
+                    <img src="../../../assets/images/default.png" class="rowing largeposter"
+                        [routerLink]="['/movie', s.id]" alt="...">
                 </div>
                 <div class="col-lg-9 mt-4 mb-4 ">
-                    <h5>{{s.original_title || s.original_name}}</h5>
+                    <h5 [routerLink]="['/movie', s.id]">{{s.original_title || s.original_name}}</h5>
                 </div>
             </div>
 
