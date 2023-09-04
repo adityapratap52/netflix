@@ -1,11 +1,14 @@
 <div class="contain mt-5">
     <div class="row p-5">
-        <div class="col-lg-2">
-            <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailsResult.poster_path }}" alt="...">
+        <div class="col-lg-2" *ngIf="getMovieDetailsResult?.poster_path != null">
+            <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailsResult?.poster_path }}" alt="...">
+        </div>
+        <div class="col-lg-2" *ngIf="!getMovieDetailsResult?.poster_path">
+            <img src="../../../assets/images/default.png" alt="...">
         </div>
         <div class="col-lg-10 mt-5 p-4">
-            <h1 class="mt-2 mb-2">{{getMovieDetailsResult.original_name || getMovieDetailsResult.original_title}}</h1>
-            <p class="mt-3 mb-3">{{getMovieDetailsResult.overview}}</p>
+            <h1 class="mt-2 mb-2">{{getMovieDetailsResult?.original_name || getMovieDetailsResult?.original_title}}</h1>
+            <p class="mt-3 mb-3">{{getMovieDetailsResult?.overview}}</p>
             <a class="btn btn-md btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Watch Trailer</a>
 
             <div class="mt-4 p-4 text-white">

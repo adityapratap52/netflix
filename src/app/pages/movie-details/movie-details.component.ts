@@ -26,7 +26,7 @@ export class MovieDetailsComponent implements OnInit {
 
   getMovie(id: any) {
     this.service.getMovieDetails(id).subscribe((result) => {
-      // console.log(result, 'getMovieDetails#');
+      console.log(result, 'getMovieDetails#');
       this.getMovieDetailsResult = result;
     });
   }

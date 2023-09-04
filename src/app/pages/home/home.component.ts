@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   // trending movie data
   trendingData() {
     this.service.trendingMovieApiData().subscribe((result) => {
-      console.log(result, 'trendingresult#');
+      // console.log(result, 'trendingresult#');
       this.trendingMovieResult = result.results;
     });
   }
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
   // adventure movies
   adventureMovies() {
     this.service.fetchAdventureMovies().subscribe((result) => {
-      console.log(result, 'adventureMovies#');
+      // console.log(result, 'adventureMovies#');
       this.adventureMoviesResult = result.results;
     });
   }
@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
   // animation movies
   animationMovies() {
     this.service.fetchAnimationMovies().subscribe((result) => {
-      console.log(result, 'animationMovies#');
+      // console.log(result, 'animationMovies#');
       this.animationMoviesResult = result.results;
     });
   }
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
   // action movies
   actionMovies() {
     this.service.fetchActionMovies().subscribe((result) => {
-      console.log(result, 'actionMovies#');
+      // console.log(result, 'actionMovies#');
       this.actionMoviesResult = result.results;
     });
   }
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
   // comedy movies
   comedyMovies() {
     this.service.fetchComedyMovies().subscribe((result) => {
-      console.log(result, 'comedyMovies#');
+      // console.log(result, 'comedyMovies#');
       this.comedyMoviesResult = result.results;
     });
   }
@@ -81,14 +81,14 @@ export class HomeComponent implements OnInit {
   // documentary movies
   documentaryMovies() {
     this.service.fetchDocumentaryMovies().subscribe((result) => {
-      console.log(result, 'documentaryMovies#');
+      // console.log(result, 'documentaryMovies#');
       this.documentryMoviesResult = result.results;
     });
   }
   // science-fiction movies
   scienceFictionMovies() {
     this.service.fetchScienceFictionMovies().subscribe((result) => {
-      console.log(result, 'scienceFictionMovies#');
+      // console.log(result, 'scienceFictionMovies#');
       this.scienceFictionMoviesResult = result.results;
     });
   }
