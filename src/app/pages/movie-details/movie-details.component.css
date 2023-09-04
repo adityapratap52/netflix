@@ -15,8 +15,3 @@ p {
 .btn:hover {
     border: 2px solid white;
 }
-
-.test {
-    box-sizing: content-box;
-    margin-right: 7px;
-}

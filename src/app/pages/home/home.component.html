@@ -6,7 +6,7 @@
                 [ngClass]="{active:i===1}">
                 <img src="https://image.tmdb.org/t/p/original/{{ b.backdrop_path }}" class="d-block w-100"
                     [routerLink]="['/movie', b.id]" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h2>{{b.original_title || b.original_name}}</h2>
                     <p>{{b.overview}}</p>
                 </div>
